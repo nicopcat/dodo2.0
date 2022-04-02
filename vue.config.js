@@ -4,6 +4,7 @@ module.exports = defineConfig({
 })
 
 module.exports = {
+
   assetsDir: 'static',
   productionSourceMap: false,
   pwa: {
@@ -14,5 +15,8 @@ module.exports = {
       maskIcon: './icon.png',
       msTileImage: './icon.png'
     }
-  }
+  },
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/dodo-v2/'
+    : '/'
 }
