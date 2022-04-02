@@ -1,9 +1,11 @@
 <template>
   <div class="main">
-    <switch-tabs @tab-switch="selectTabs($event)"></switch-tabs>
-    <add-tasks></add-tasks>
-    <done-list v-if="selectedTabs === 'done-tasks'"></done-list>
-    <todo-list v-if="selectedTabs === 'doing-tasks'"></todo-list>
+    <base-lists>
+      <switch-tabs @tab-switch="selectTabs($event)"></switch-tabs>
+      <add-tasks></add-tasks>
+      <done-list v-if="selectedTabs === 'done-tasks'"></done-list>
+      <todo-list v-if="selectedTabs === 'doing-tasks'"></todo-list>
+    </base-lists>
   </div>
 </template>
 

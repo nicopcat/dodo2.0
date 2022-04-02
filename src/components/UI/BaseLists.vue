@@ -1,6 +1,6 @@
 <template>
   <div>
-    <slot name="header"></slot>
+    <!-- <slot name="header"></slot> -->
     <slot></slot>
   </div>
 </template>

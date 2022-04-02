@@ -3,7 +3,11 @@
     <div class="logo">
       <a href="/">
         <!-- 引入assets中的img -->
-        <img src="@/assets/icon.svg" alt="logo" />
+        <!-- <img src="@/assets/icon.svg" alt="logo" /> -->
+        <img
+          src="https://blogpic-1308403500.cos.ap-shanghai.myqcloud.com//iconsTheHeader-2022-04-02-21-31-51.svg"
+          alt="logo"
+        />
         <h2>Dodo</h2>
       </a>
     </div>

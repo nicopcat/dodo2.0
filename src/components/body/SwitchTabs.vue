@@ -22,9 +22,15 @@ export default {
   },
   computed: {
     todoCount() {
+      if (this.$store.getters.todoList == 0) {
+        return 0;
+      }
       return this.$store.getters.todoList.length;
     },
     doneCount() {
+      if (this.$store.getters.doneList == 0) {
+        return 0;
+      }
       return this.$store.getters.doneList.length;
     },
   },

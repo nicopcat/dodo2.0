@@ -4,7 +4,6 @@ const store = createStore({
     state() {
         return {
             todos: [],
-            dummyData: { id: 1, taskName: '试试dodo', done: false },
             filterWords: '',
         }
     },
@@ -13,7 +12,7 @@ const store = createStore({
             if (state.todos.length > 0) {
                 return state.todos.filter(todo => todo.done === false)
             } else {
-                return state.dummyData;
+                return 0;
             }
 
         },
@@ -23,7 +22,7 @@ const store = createStore({
             if (state.todos.length > 0) {
                 return state.todos.filter(todo => todo.done !== false)
             } else {
-                return state.dummyData;
+                return 0;
             }
         },
         filteredWord(state) {

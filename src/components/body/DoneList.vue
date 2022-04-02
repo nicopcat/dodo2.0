@@ -1,8 +1,7 @@
 <template>
   <base-lists>
     <h2>做完啦 🎉🤭</h2>
-    <!-- <transition-group fade tag="ul"> -->
-    <trans-group v-if="isFiltering == ''">
+    <transition-group fade tag="ul" v-if="isFiltering == ''">
       <base-single-li v-for="item in doneList" :key="item.id">
         <input type="checkbox" checked @click="uncheckTodoTask(item.id)" />
         <span class="li">
@@ -12,17 +11,17 @@
             @keyup.enter="editTodo(item.taskName, item.id)"
             @blur="editTodo(item.taskName, item.id)"
         /></span>
-
         <del-button @click="deleteDoneTask(item.id)">x</del-button>
       </base-single-li>
-    </trans-group>
-    <trans-group v-else>
+    </transition-group>
+
+    <transition-group fade tag="ul" v-else>
       <base-single-li v-for="item in filteredTodos" :key="item.id">
         <input type="checkbox" checked @click="uncheckTodoTask(item.id)" />
         {{ item.taskName }}
         <del-button @click="deleteDoneTask(item.id)">x</del-button>
       </base-single-li>
-    </trans-group>
+    </transition-group>
     <div class="noTodos" v-if="isFiltering && filteredTodos == null">
       Oops! 没有相关任务哟..
     </div>
@@ -86,21 +85,16 @@ h2 {
   background-color: #fff;
   color: green;
 }
-ul li {
-  text-decoration-line: line-through;
-  color: rgba(0, 0, 0, 0.432);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
-ul input {
-  width: 1rem;
-  height: 1rem;
-}
-
-.li input {
+ul .li input {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   border: none;
   background-color: transparent;
   outline: none;
+  text-decoration-line: line-through;
+  color: rgba(0, 0, 0, 0.432);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .noTodos {
