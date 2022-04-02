@@ -23,7 +23,7 @@
         <del-button @click="deleteDoneTask(item.id)">x</del-button>
       </base-single-li>
     </trans-group>
-    <div class="noTodos" v-if="isFiltering && filteredTodos.length <= 0">
+    <div class="noTodos" v-if="isFiltering && filteredTodos == null">
       Oops! 没有相关任务哟..
     </div>
   </base-lists>

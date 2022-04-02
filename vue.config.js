@@ -1,10 +1,6 @@
 const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
-  transpileDependencies: true
-})
-
 module.exports = {
-
+  transpileDependencies: true,
   assetsDir: 'static',
   productionSourceMap: false,
   pwa: {
@@ -15,8 +11,5 @@ module.exports = {
       maskIcon: './icon.png',
       msTileImage: './icon.png'
     }
-  },
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/dodo-v2/'
-    : '/'
+  }
 }
