@@ -4,16 +4,27 @@ const store = createStore({
     state() {
         return {
             todos: [],
+            dummyData: { id: 1, taskName: '试试dodo', done: false },
             filterWords: '',
         }
     },
     getters: {
         todoList(state) {
-            return state.todos.filter(todo => todo.done === false)
+            if (state.todos.length > 0) {
+                return state.todos.filter(todo => todo.done === false)
+            } else {
+                return state.dummyData;
+            }
+
         },
         doneList(state) {
             // 不可以写todo.done === true
-            return state.todos.filter(todo => todo.done !== false)
+
+            if (state.todos.length > 0) {
+                return state.todos.filter(todo => todo.done !== false)
+            } else {
+                return state.dummyData;
+            }
         },
         filteredWord(state) {
             return state.filterWords;
