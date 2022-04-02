@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <div class="logo">
-      <a href="/">
+      <a href="/dodo-v2">
         <!-- 引入assets中的img -->
         <!-- <img src="@/assets/icon.svg" alt="logo" /> -->
         <img
