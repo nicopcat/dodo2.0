@@ -80,14 +80,13 @@ export default {
 
 <style scoped>
 h2 {
-  width: 98%;
-  margin-left: 0.2em;
-  padding: 0.5em 0;
-  font-size: 1.6em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  padding-left: 0.2em;
-  background-color: #fff;
+  /* width: 98%; */
+  /* margin-left: 0.2em; */
+  padding: 0.3em 0;
   color: green;
+  background-color: #fff;
+  font-size: 1.4em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 ul .li input {

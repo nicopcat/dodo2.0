@@ -83,12 +83,12 @@ export default {
 
 <style scoped>
 h2 {
-  width: 98%;
-  margin-left: 0.2em;
-  padding: 0.5em 0;
+  /* width: 98%; */
+  /* margin-left: 0.2em; */
+  padding: 0.3em 0;
   color: rgba(255, 166, 0, 0.795);
   background-color: #fff;
-  font-size: 1.6em;
+  font-size: 1.4em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 

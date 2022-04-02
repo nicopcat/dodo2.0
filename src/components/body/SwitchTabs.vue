@@ -86,13 +86,19 @@ export default {
   color: rgb(52, 52, 52);
 }
 
+span {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
 .doneBadge {
   background-color: rgba(0, 128, 0, 0.829);
   color: white;
   position: absolute;
-  top: 0vh;
+  top: -3px;
+  right: -3px;
   width: 1em;
   height: 1em;
+  padding: 0.1em;
   border-radius: 2px;
   transform: scale(0.55);
 }
@@ -101,9 +107,11 @@ export default {
   background-color: rgba(255, 162, 0, 0.925);
   color: white;
   position: absolute;
-  top: 0vh;
+  top: -3px;
+  right: -3px;
   width: 1em;
   height: 1em;
+  padding: 0.1em;
   border-radius: 2px;
   transform: scale(0.55);
 }
