@@ -1,9 +1,6 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  transpileDependencies: true
-})
-
-module.exports = {
+  transpileDependencies: true,
   assetsDir: 'static',
   productionSourceMap: false,
   pwa: {
@@ -15,4 +12,4 @@ module.exports = {
       msTileImage: './icon.png'
     }
   }
-}
+})
