@@ -8,11 +8,11 @@
 <style scoped>
 div {
   background-color: #fff;
-  margin: 2rem auto;
+  margin: 0 auto;
   max-width: 100%;
   border-radius: 12px;
   /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16); */
-  padding: 1rem;
+  padding: 0 1rem;
 }
 h2 {
   font-size: 1.6em;
