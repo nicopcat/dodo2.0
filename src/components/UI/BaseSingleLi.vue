@@ -13,9 +13,10 @@ li::before {
 }
 
 li {
-  margin: 0.6em 0.6em 0 0.3em;
+  margin: 0.5em 0.5em 0 0.4em;
   font-size: 1rem;
   padding: 0.3em 0;
+  line-height: 1.3em;
   cursor: pointer;
   border-bottom: 1px solid rgba(192, 192, 192, 0.268);
   border-top: 1px solid rgba(192, 192, 192, 0.268);

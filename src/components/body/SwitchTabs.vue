@@ -96,6 +96,7 @@ span {
   position: absolute;
   top: -3px;
   right: -3px;
+  line-height: 1em;
   width: 1em;
   height: 1em;
   padding: 0.1em;
@@ -109,6 +110,7 @@ span {
   position: absolute;
   top: -3px;
   right: -3px;
+  line-height: 1em;
   width: 1em;
   height: 1em;
   padding: 0.1em;

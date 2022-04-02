@@ -34,7 +34,8 @@ h3,
 h4,
 h5,
 ul,
-li {
+li,
+input {
   margin: 0;
   padding: 0;
   font-family: Helvetica, Arial, sans-serif;

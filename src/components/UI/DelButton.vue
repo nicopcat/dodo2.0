@@ -11,14 +11,15 @@ span::before {
 
 span {
   float: right;
-  margin: 0.2em 0.1em 0 0;
+  /* margin: 0.2em 0.1em 0 0; */
   padding: 0 0.4em;
-  font-size: 12px;
+  /* font-size: 10px; */
   cursor: pointer;
   border-radius: 4px;
   color: rgb(252, 252, 252);
   background-color: rgba(118, 118, 118, 0.932);
   transition: all 0.5s;
+  transform: scale(0.8);
 }
 
 span:hover {

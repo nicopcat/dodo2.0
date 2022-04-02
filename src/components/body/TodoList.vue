@@ -3,7 +3,9 @@
     <h2>我我我.. 我马上做 😓</h2>
     <transition-group appear tag="ul" v-if="thefilteredWord == ''">
       <base-single-li v-for="item in todoList" :key="item.id">
-        <input type="checkbox" @click="checkTodoTask(item.id)" />
+        <span class="checkbox">
+          <input type="checkbox" @click="checkTodoTask(item.id)" />
+        </span>
         <span class="li">
           <input
             type="text"
@@ -64,7 +66,6 @@ export default {
     },
     loadTodoList() {
       this.$store.dispatch("loadTodo");
-      console.log(this.$store.getters.todoList);
     },
     editTodo(content, id) {
       this.$store.dispatch("editTodo", {
@@ -83,8 +84,6 @@ export default {
 
 <style scoped>
 h2 {
-  /* width: 98%; */
-  /* margin-left: 0.2em; */
   padding: 0.3em 0;
   color: rgba(255, 166, 0, 0.795);
   background-color: #fff;
@@ -93,11 +92,11 @@ h2 {
 }
 
 .li input {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0 0.5em;
   border: none;
   background-color: transparent;
   outline: none;
+  font-size: 1em;
 }
 
 .noTodos {
