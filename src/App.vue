@@ -15,6 +15,14 @@ export default {
     MainPart,
     TheFooter,
   },
+  methods: {
+    loadTodoList() {
+      this.$store.dispatch("loadTodo");
+    },
+  },
+  mounted() {
+    this.loadTodoList();
+  },
 };
 </script>
 

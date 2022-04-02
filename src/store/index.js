@@ -9,7 +9,7 @@ const store = createStore({
     },
     getters: {
         todoList(state) {
-            if (state.todos.length > 0) {
+            if (state.todos !== null) {
                 return state.todos.filter(todo => todo.done === false)
             } else {
                 return 0;
@@ -19,7 +19,7 @@ const store = createStore({
         doneList(state) {
             // 不可以写todo.done === true
 
-            if (state.todos.length > 0) {
+            if (state.todos !== null) {
                 return state.todos.filter(todo => todo.done !== false)
             } else {
                 return 0;

@@ -1,18 +1,22 @@
 <template>
-  <div class="switch-tabs">
-    <div class="wrapper">
-      <button @click="setDone" :class="selectedDone">
-        已完成<span class="doneBadge">{{ this.doneCount }}</span>
-      </button>
-      <button @click="setDoing" :class="selectedDoing">
-        未完成<span class="todoBadge">{{ this.todoCount }}</span>
-      </button>
+  <base-lists>
+    <div class="switch-tabs">
+      <div class="wrapper">
+        <button @click="setDone" :class="selectedDone">
+          已完成<span class="doneBadge">{{ this.doneCount }}</span>
+        </button>
+        <button @click="setDoing" :class="selectedDoing">
+          未完成<span class="todoBadge">{{ this.todoCount }}</span>
+        </button>
+      </div>
     </div>
-  </div>
+  </base-lists>
 </template>
 
 <script>
+import BaseLists from "../UI/BaseLists.vue";
 export default {
+  components: { BaseLists },
   emits: ["tab-switch"],
   data() {
     return {
@@ -24,14 +28,16 @@ export default {
     todoCount() {
       if (this.$store.getters.todoList == 0) {
         return 0;
+      } else {
+        return this.$store.getters.todoList.length;
       }
-      return this.$store.getters.todoList.length;
     },
     doneCount() {
       if (this.$store.getters.doneList == 0) {
         return 0;
+      } else {
+        return this.$store.getters.doneList.length;
       }
-      return this.$store.getters.doneList.length;
     },
   },
   methods: {

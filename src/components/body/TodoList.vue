@@ -1,7 +1,7 @@
 <template>
   <base-lists>
     <h2>我我我.. 我马上做 😓</h2>
-    <transition-group appear tag="ul" v-if="isFiltering == ''">
+    <transition-group appear tag="ul" v-if="thefilteredWord == ''">
       <base-single-li v-for="item in todoList" :key="item.id">
         <input type="checkbox" @click="checkTodoTask(item.id)" />
         <span class="li">
@@ -21,10 +21,10 @@
         {{ item.taskName }}
         <del-button @click="deleteTodoTask(item.id)">x</del-button>
       </base-single-li>
+      <!-- <div class="noTodos" v-if="filteredTodos == null">
+        Oops! 没有相关任务哟..
+      </div> -->
     </transition-group>
-    <div class="noTodos" v-if="isFiltering && filteredTodos.length <= 0">
-      Oops! 没有相关任务哟..
-    </div>
   </base-lists>
 </template>
  
@@ -44,12 +44,13 @@ export default {
     },
     filteredTodos() {
       // todoList.taskName.indexOf('thefilteredWord')
-      return this.todoList.filter(
-        (todo) => todo.taskName.indexOf(this.thefilteredWord) !== -1
-      );
-    },
-    isFiltering() {
-      return this.$store.getters.filteredWord;
+      if (this.todoList == 0) {
+        return 0;
+      } else {
+        return this.todoList.filter(
+          (todo) => todo.taskName.indexOf(this.thefilteredWord) !== -1
+        );
+      }
     },
   },
   methods: {
@@ -63,6 +64,7 @@ export default {
     },
     loadTodoList() {
       this.$store.dispatch("loadTodo");
+      console.log(this.$store.getters.todoList);
     },
     editTodo(content, id) {
       this.$store.dispatch("editTodo", {

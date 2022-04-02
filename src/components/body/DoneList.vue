@@ -1,7 +1,7 @@
 <template>
   <base-lists>
     <h2>做完啦 🎉🤭</h2>
-    <transition-group fade tag="ul" v-if="isFiltering == ''">
+    <transition-group fade tag="ul" v-if="isFiltering == '' && doneList !== 0">
       <base-single-li v-for="item in doneList" :key="item.id">
         <input type="checkbox" checked @click="uncheckTodoTask(item.id)" />
         <span class="li">
@@ -22,9 +22,6 @@
         <del-button @click="deleteDoneTask(item.id)">x</del-button>
       </base-single-li>
     </transition-group>
-    <div class="noTodos" v-if="isFiltering && filteredTodos == null">
-      Oops! 没有相关任务哟..
-    </div>
   </base-lists>
 </template>
 
@@ -32,16 +29,24 @@
 export default {
   computed: {
     doneList() {
-      return this.$store.getters.doneList;
+      if (this.$store.getters.doneList == 0) {
+        return 0;
+      } else {
+        return this.$store.getters.doneList;
+      }
     },
     thefilteredWord() {
       return this.$store.getters.filteredWord;
     },
     filteredTodos() {
       // todoList.taskName.indexOf('thefilteredWord')
-      return this.doneList.filter(
-        (todo) => todo.taskName.indexOf(this.thefilteredWord) !== -1
-      );
+      if (this.doneList == 0) {
+        return 0;
+      } else {
+        return this.doneList.filter(
+          (todo) => todo.taskName.indexOf(this.thefilteredWord) !== -1
+        );
+      }
     },
     isFiltering() {
       return this.$store.getters.filteredWord;
@@ -64,7 +69,6 @@ export default {
         content: content,
         id: id,
       });
-
       this.loadTodoList();
     },
   },
