@@ -8,11 +8,11 @@ module.exports = {
   productionSourceMap: false,
   pwa: {
     iconPaths: {
-      favicon32: './icon.png',
-      favicon16: './icon.png',
-      appleTouchIcon: './icon.png',
-      maskIcon: './icon.png',
-      msTileImage: './icon.png'
+      favicon32: './favicon-32x32',
+      favicon16: './favicon-16x16',
+      appleTouchIcon: './apple-touch-icon.png',
+      maskIcon: './apple-touch-icon.png',
+      msTileImage: './apple-touch-icon.png'
     }
   }
 }
