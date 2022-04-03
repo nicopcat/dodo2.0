@@ -38,10 +38,11 @@ export default {
 <style scoped>
 .main {
   margin: 0 auto;
-  margin-top: 1rem;
-  max-width: 720px;
-  min-width: 320px;
-  min-height: 85vh;
+  margin-top: 1.5rem;
+  width: 90%;
+  max-width: 620px;
+  min-width: 340px;
+  height: 100%;
   border-radius: 0.8rem;
   background-color: rgb(255, 255, 255);
 }

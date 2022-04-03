@@ -63,10 +63,23 @@ export default {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-size: 1rem;
+  transition: all 0.35s;
 }
 .add-tasks input:focus {
-  border: 1px solid rgba(29, 78, 238, 0.699);
-  outline: rgba(29, 78, 238, 0.699);
+  border: 1px solid rgba(0, 94, 184);
+  outline: rgba(0, 94, 184);
+}
+
+.add-tasks input::-webkit-input-placeholder {
+  font-size: 14px;
+}
+
+.add-tasks input::-moz-placeholder {
+  font-size: 14px;
+}
+
+.add-tasks input::-ms-input-placeholder {
+  font-size: 14px;
 }
 
 .add-tasks button {

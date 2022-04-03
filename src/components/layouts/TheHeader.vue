@@ -29,11 +29,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .nav {
+  /* min-width: 420px; */
   width: 100%;
   height: 55px;
   background-color: rgb(0, 94, 184);
   display: flex;
+  flex-direction: row;
   justify-content: stretch;
+  line-height: 55px;
 }
 .nav .logo a img {
   width: 38px;
@@ -46,26 +49,21 @@ export default {
   position: absolute;
   left: 0.6rem;
   width: 8rem;
-  float: left;
-  height: 40px;
+
   margin: 2px 0;
-  margin-left: 0.1%;
 }
 
 .nav h2 {
   font-size: 22px;
   font-weight: 500;
-  float: left;
+  /* float: left; */
   color: white;
-  margin: 15px 0px 0 0;
   background: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.486);
 }
 
 .nav .inp {
   margin-left: 30%;
-  width: 68%;
-  height: 40px;
-  line-height: 62px;
+  min-width: 55%;
+  width: 65%;
 }
 </style>

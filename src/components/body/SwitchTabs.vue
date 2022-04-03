@@ -100,7 +100,7 @@ span {
   width: 1em;
   height: 1em;
   padding: 0.1em;
-  border-radius: 2px;
+  border-radius: 3px;
   transform: scale(0.55);
 }
 
@@ -114,7 +114,7 @@ span {
   width: 1em;
   height: 1em;
   padding: 0.1em;
-  border-radius: 2px;
+  border-radius: 3px;
   transform: scale(0.55);
 }
 </style>

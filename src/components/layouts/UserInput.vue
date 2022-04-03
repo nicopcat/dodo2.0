@@ -25,14 +25,14 @@ export default {
 </script>
 <style scoped>
 input {
-  width: 60%;
-  max-width: 620px;
+  width: 55%;
+  max-width: 520px;
   height: 34px;
   padding: 0 0.8em;
-  border-radius: 1em;
+  border-radius: 0.5em;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 14px;
   background-color: rgba(255, 255, 255, 0.2);
   color: rgb(241, 247, 252);
   transition: background-color 0.6s;
@@ -48,12 +48,15 @@ input:focus {
 
 input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
 }
 input:-moz-placeholder {
   color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
 }
 input:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
 }
 
 button {
@@ -61,7 +64,7 @@ button {
   margin-left: 0.8rem;
   width: 62px;
   height: 33px;
-  background-color: rgb(0, 96, 191);
+  background-color: rgb(44, 117, 190);
   color: white;
   border: none;
   border-radius: 6px;

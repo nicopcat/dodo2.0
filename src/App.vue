@@ -1,7 +1,9 @@
 <template>
-  <the-header></the-header>
-  <main-part></main-part>
-  <the-footer></the-footer>
+  <div class="app">
+    <the-header></the-header>
+    <main-part></main-part>
+    <the-footer></the-footer>
+  </div>
 </template>
 
 <script>
@@ -52,5 +54,11 @@ html {
 
 li {
   list-style: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 </style>
