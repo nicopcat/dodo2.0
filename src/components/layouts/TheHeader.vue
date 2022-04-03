@@ -56,7 +56,7 @@ export default {
 .nav h2 {
   font-size: 22px;
   font-weight: 500;
-  /* float: left; */
+  float: left;
   color: white;
   background: transparent;
 }
