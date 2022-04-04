@@ -13,7 +13,7 @@
             @keyup.enter="editTodo(item.taskName, item.id)"
             @blur="editTodo(item.taskName, item.id)"
         /></span>
-        <del-button @click="deleteTodoTask(item.id)">x</del-button>
+        <del-button @click="deleteTodoTask(item.id)">✖</del-button>
       </base-single-li>
     </transition-group>
 
@@ -21,7 +21,7 @@
       <base-single-li v-for="item in filteredTodos" :key="item.id">
         <input type="checkbox" @click="checkTodoTask(item.id)" />
         {{ item.taskName }}
-        <del-button @click="deleteTodoTask(item.id)">x</del-button>
+        <del-button @click="deleteTodoTask(item.id)">✖</del-button>
       </base-single-li>
       <!-- <div class="noTodos" v-if="filteredTodos == null">
         Oops! 没有相关任务哟..
@@ -91,7 +91,7 @@ h2 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.li input {
+ul .li input {
   width: 75%;
   padding: 0 0.5em;
   border: none;
