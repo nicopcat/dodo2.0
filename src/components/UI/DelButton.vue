@@ -7,7 +7,7 @@
 <style scoped>
 span {
   float: right;
-  padding: 0.2em 0.2em;
+  padding: 0.2em 0.1em;
   height: 1em;
   line-height: 1.1em;
   cursor: pointer;
