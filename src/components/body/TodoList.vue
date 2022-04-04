@@ -92,6 +92,7 @@ h2 {
 }
 
 .li input {
+  width: 75%;
   padding: 0 0.5em;
   border: none;
   background-color: transparent;

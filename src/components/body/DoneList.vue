@@ -11,7 +11,7 @@
             @keyup.enter="editTodo(item.taskName, item.id)"
             @blur="editTodo(item.taskName, item.id)"
         /></span>
-        <del-button @click="deleteDoneTask(item.id)">x</del-button>
+        <del-button @click="deleteDoneTask(item.id)">✖</del-button>
       </base-single-li>
     </transition-group>
 
@@ -19,7 +19,7 @@
       <base-single-li v-for="item in filteredTodos" :key="item.id">
         <input type="checkbox" checked @click="uncheckTodoTask(item.id)" />
         {{ item.taskName }}
-        <del-button @click="deleteDoneTask(item.id)">x</del-button>
+        <del-button @click="deleteDoneTask(item.id)">✖</del-button>
       </base-single-li>
     </transition-group>
   </base-lists>
@@ -88,8 +88,11 @@ h2 {
 }
 
 ul .li input {
+  width: 75%;
   padding: 0 0.5em;
   border: none;
+  color: rgba(149, 149, 149, 0.735);
+  text-decoration: line-through;
   background-color: transparent;
   outline: none;
   font-size: 1em;
