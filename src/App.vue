@@ -1,8 +1,8 @@
 <template>
   <div class="app">
-    <the-header></the-header>
-    <main-part></main-part>
-    <the-footer></the-footer>
+    <the-header class="header"></the-header>
+    <main-part class="main"></main-part>
+    <the-footer class="footer"></the-footer>
   </div>
 </template>
 
@@ -57,8 +57,14 @@ li {
 }
 
 .app {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  position: relative;
+
+  min-height: 100%;
+  height: 100%;
+  padding-bottom: 2.5rem;
+}
+
+.main {
+  min-height: 86vh;
 }
 </style>
