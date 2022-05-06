@@ -1,8 +1,8 @@
 <template>
   <div>
     <span
-      >© 2022 Dodo-v2 to-do list. Created by
-      <a href="https://www.niqks.tk">Nekolas</a></span
+      >© 2022 Dodo | Your simple to-do list | Created by
+      <a href="https://nekolas.cafe/">Nekolas</a></span
     >
   </div>
 </template>
@@ -13,6 +13,7 @@ export default {};
 
 <style scoped>
 div {
+  font-family: "Trebuchet MS", sans-serif;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -20,10 +21,10 @@ div {
   margin: 10px 0;
 
   text-align: center;
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: rgb(167, 167, 167);
 }
 span a {
-  color: green;
+  color: rgb(0, 94, 184);
 }
 </style>
