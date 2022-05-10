@@ -1,6 +1,6 @@
 <template>
   <base-lists>
-    <h2>做完啦 🎉🤭</h2>
+    <h2>完成任务 🎉</h2>
     <transition-group fade tag="ul" v-if="isFiltering == '' && doneList !== 0">
       <base-single-li v-for="item in doneList" :key="item.id">
         <input type="checkbox" checked @click="uncheckTodoTask(item.id)" />

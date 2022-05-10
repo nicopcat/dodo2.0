@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <div class="logo">
-      <a href="/dodo-v2">
+      <a href="/">
         <!-- 引入assets中的img -->
         <!-- <img src="@/assets/icon.svg" alt="logo" /> -->
         <img
@@ -31,26 +31,28 @@ export default {
 .nav {
   /* min-width: 420px; */
   width: 100%;
-  height: 55px;
+  height: 60px;
   background-color: rgb(0, 94, 184);
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: stretch;
+  align-items: center;
   line-height: 55px;
 }
+
+.nav .logo {
+  position: absolute;
+  left: 0.6rem;
+  width: 8rem;
+  margin: 2px 0;
+}
+
 .nav .logo a img {
   width: 38px;
   float: left;
   margin: 7px 3px;
   border-radius: 6px;
   margin-left: 0.8%;
-}
-.nav .logo {
-  position: absolute;
-  left: 0.6rem;
-  width: 8rem;
-
-  margin: 2px 0;
 }
 
 .nav h2 {

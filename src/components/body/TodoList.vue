@@ -1,6 +1,6 @@
 <template>
   <base-lists>
-    <h2>我我我.. 我马上做 😓</h2>
+    <h2>任务列表 📝</h2>
     <transition-group appear tag="ul" v-if="thefilteredWord == ''">
       <base-single-li v-for="item in todoList" :key="item.id">
         <span class="checkbox">
@@ -29,7 +29,7 @@
     </transition-group>
   </base-lists>
 </template>
- 
+
 <script>
 export default {
   data() {
@@ -126,4 +126,3 @@ ul .li input {
   transition: all 0.5s ease;
 }
 </style>
-

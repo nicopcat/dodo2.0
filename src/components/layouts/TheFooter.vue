@@ -1,7 +1,7 @@
 <template>
   <div>
     <span
-      >© 2022 Dodo | Your simple to-do list | Created by
+      >© 2022 Dodo | A simple to-do list | By
       <a href="https://nekolas.cafe/">Nekolas</a></span
     >
   </div>
@@ -13,7 +13,7 @@ export default {};
 
 <style scoped>
 div {
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: helvetica, "Trebuchet MS", sans-serif;
   position: absolute;
   bottom: 0;
   width: 100%;
