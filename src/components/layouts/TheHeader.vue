@@ -5,7 +5,7 @@
         <!-- 引入assets中的img -->
         <!-- <img src="@/assets/icon.svg" alt="logo" /> -->
         <img
-          src="https://blogpic-1308403500.cos.ap-shanghai.myqcloud.com//iconsTheHeader-2022-04-02-21-31-51.svg"
+          src="@/assets/img/android-chrome-192x192.png"
           alt="logo"
         />
         <h2>Dodo</h2>
